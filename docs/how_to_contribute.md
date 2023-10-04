@@ -4,18 +4,6 @@ layout: home
 nav_order: 2
 ---
 
-
-# How to contribute
-
-Do things, nicely.
-
----
-title: How to Contribute
-layout: home
-nav_order: 2
----
-
-
 # How to contribute
 
 - Make a GitHub Account
