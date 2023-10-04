@@ -7,7 +7,7 @@ nav_order: 2
 
 **Conda and Jupyter Lab Setup**
 
-_Contributor: Ailish Green _
+_Contributor: Ailish Graham_
 
 connect to local cluster   
 
