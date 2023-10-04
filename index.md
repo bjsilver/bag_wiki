@@ -6,6 +6,8 @@ nav_order: 1
 
 # Welcome to the BAG Wiki!
 
+![image]("/assets/BAG_mug_colab.png")
+
 ### What is this for?
 A wiki for BAG to share IT/python FAQs and tips. Useful content you could add...
 - Computer resources are available and how to access them
