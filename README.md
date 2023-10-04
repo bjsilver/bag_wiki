@@ -1,5 +1,5 @@
 # BAG Wiki Github repo
-This is the repository for the [BAG Wiki](https://github.com/bjsilver/bag_wiki)
+This is the repository for the [BAG Wiki](https://bjsilver.github.io/bag_wiki/)
 
 ## About the BAG wiki
 A wiki for BAG to share IT/python FAQs and tips. Useful content you could add...
