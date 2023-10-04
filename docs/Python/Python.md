@@ -1,9 +1,9 @@
 ---
 layout: default
-title: FAQs
+title: Python
 nav_order: 3
 has_children: true
-permalink: /docs/FAQs
+permalink: /docs/Python
 ---
 
 # Python
