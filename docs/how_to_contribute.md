@@ -8,7 +8,7 @@ nav_order: 2
 
 - Make a GitHub Account
 
-![screenshot](/assets/screenshots/create_fork_screenshot.png)
+![screenshot](../assets/screenshots/create_fork_screenshot.png)
 
 - Go to the [repository](https://github.com/bjsilver/bag_wiki)
 - Press 'Fork', then create new fork. This enables you to make changes to a personal version of the repository.
