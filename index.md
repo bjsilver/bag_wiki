@@ -25,4 +25,4 @@ A detailed guide can be found here (TO BE ADDED)
 
 ### How this site works
 Made using the bare minimum Just the Docs theme template available [here](https://github.com/just-the-docs/just-the-docs-template/tree/main).
-Visit https://just-the-docs.com/ for a guide on how to build the wiki.
+Visit [https://just-the-docs.com/](https://just-the-docs.com/) for a guide on how to build the wiki.
