@@ -1,3 +1,11 @@
+---
+layout: default
+title: Remote console in Spyder
+parent: FAQs
+nav_order: 2
+---
+
+
 Remote console in Spyder to reduce lag 
 
 _Contributors: Richard Rigby, Ben Silver_
