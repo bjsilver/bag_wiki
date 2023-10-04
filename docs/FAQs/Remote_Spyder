@@ -2,6 +2,8 @@ Remote console in Spyder to reduce lag
 
 _Contributors: Richard Rigby, Ben Silver_
 
+Edit
+
 Currently most of us who use Spyder launch it from a linux machine we have ssh'ed into which can create lag (especially if you are off campus). But in Spyder there is a feature where you can run Spyder locally but the terminal can be a remote one. This means the terminal will have access to all the packages/files on the remote machine, but the application is being run locally (i.e. you have to install it on your own computer) so there will be no lag. I've found this connection to be much more stable than running Spyder in an Xwindow using ssh. 
 
   
