@@ -18,9 +18,9 @@ A wiki for BAG to share IT/python FAQs and tips. Useful content you could add...
 
 The wiki can be edited via its Github repo: https://github.com/bjsilver/bag_wiki/
 
-To contribute you can clone the repository and make pull requests to add pages. Don't worry about getting the formatting right.
+To contribute you either email your contribution to Ben or Callum, or submit the change as a Pull Request (details linked below). Don't worry about getting the formatting right.
 
-A detailed guide can be found here (TO BE ADDED)
+A detailed guide on how to submit a change as pull request can be found [here](https://bjsilver.github.io/bag_wiki/docs/how_to_contribute.html) 
 
 
 ### How this site works
