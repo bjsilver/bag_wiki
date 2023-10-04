@@ -1,3 +1,11 @@
+---
+layout: default
+title: SSH Keys
+parent: FAQs
+nav_order: 2
+---
+
+
 ## Using ssh key pairs to avoid having to use password/Duo 
 
 On a terminal (MobaXterm etc.) use ssh-keygen to generate an ssh key pair on your local machine. It will ask for a location to save the keys. Hit enter to accept the default. Then you can set a password (recommended) or just press enter to not have a local password. 
