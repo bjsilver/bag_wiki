@@ -1,3 +1,10 @@
+---
+layout: default
+title: Conda and JupyterLab setup
+parent: FAQs
+nav_order: 2
+---
+
 **Conda and Jupyter Lab Setup**
 
 _Contributor: Ailish Green _
