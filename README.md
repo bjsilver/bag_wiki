@@ -11,7 +11,7 @@ A wiki for BAG to share IT/python FAQs and tips. Useful content you could add...
 
 To contribute you can clone the repository and make pull requests to add pages. Don't worry about getting the formatting right.
 
-A detailed guide can be found here (TO BE ADDED)
+A detailed guide can be found [here](https://github.com/bjsilver/bag_wiki/blob/main/docs/how_to_contribute.md)
 
 
 Made using the bare minimum Just the Docs theme template available [here](https://github.com/just-the-docs/just-the-docs-template/tree/main)
