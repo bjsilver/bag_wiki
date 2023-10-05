@@ -6,12 +6,13 @@ nav_order: 2
 
 # How to contribute
 
-- Make a GitHub Account
+# Work in Progress!
 
-![screenshot](../assets/screenshots/create_fork_screenshot.png)
+- Make a GitHub Account
 
 - Go to the [repository](https://github.com/bjsilver/bag_wiki)
 - Press 'Fork', then create new fork. This enables you to make changes to a personal version of the repository.
+![screenshot](../assets/screenshots/create_fork_screenshot.png)
 - Once created, navigate to the directory, e.g. Docs -> FAQs. Press 'Add file', then 'Create new file'.
 - Fill in your file name, appending the name with .md (markdown)
 - Enter your text / images / tables.
