@@ -65,4 +65,4 @@ def get_latlon_areas(latcentres, loncentres, latres, lonres):
 ```
 
 ### Testing it
-
+{% include ./assets/notebooks/gricell_area.html %}
