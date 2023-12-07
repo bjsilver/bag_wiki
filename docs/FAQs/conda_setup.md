@@ -26,4 +26,5 @@ To ensure that conda always prioritises installing from conda forge,
 	  - defaults
 	```
 3. set the channel priority to strict
+   
 	```conda config --set channel_priority strict```
