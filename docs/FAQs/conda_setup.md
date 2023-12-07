@@ -16,8 +16,8 @@ It is often better to use the `conda-forge` channel for the packages we commonly
 By default, conda will prioritize downloading from the default channel, which could lead to conflicts or unresolvable environments if mixed with installs from `conda-forge`
 
 To ensure that conda always prioritises installing from conda forge,
+<div class="code-example" markdown="1">
 1. edit the `.condarc` file in your home directory to prioritise `condaforge`
-
 ```
 channel_priority: strict
 channels:
@@ -26,3 +26,4 @@ channels:
 ```
 2. set the channel priority to strict
 ```conda config --set channel_priority strict```
+</div>
