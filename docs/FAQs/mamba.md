@@ -9,8 +9,7 @@ nav_order: 2
 
 Using mamba as an alternative to conda can resolve tricky environments that are a nightmare to maintain with conda and can be extrmely slow to install.
 
-{: .note }
-Don't be afraid to delete conda and start from scratch!
+{: .note } Don't be afraid to delete conda and start from scratch!
 This often massively improves the speed of installs as it gets rid of older versions of packages that are unused and creating conflicts.
 
 Mamba is a 'drop-in' replacement for conda, so after installing it, you just swap `conda` for `mamba` e.g.
