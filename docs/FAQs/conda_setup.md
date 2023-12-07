@@ -18,12 +18,12 @@ By default, conda will prioritize downloading from the default channel, which co
 To ensure that conda always prioritises installing from conda forge,
 <div class="code-example" markdown="1">
 1. edit the `.condarc` file in your home directory to prioritise `condaforge`
-```
-channel_priority: strict
-channels:
-  - conda-forge
-  - defaults
-```
+	```
+	channel_priority: strict
+	channels:
+	  - conda-forge
+	  - defaults
+	```
 2. set the channel priority to strict
-```conda config --set channel_priority strict```
+	```conda config --set channel_priority strict```
 </div>
