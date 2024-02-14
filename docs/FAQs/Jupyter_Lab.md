@@ -23,7 +23,7 @@ need to do this to be able to access your environment as a kernel in jupyterlab,
 
 do this once only (first time you set up jupyter) to set jupyter password (not same as uni password)   
 
-`jupyter notebook --generate-config    `
+`jupyter-notebook --generate-config    `
 
 jupyter notebook password (NOT SAME as uni password)   
 
@@ -31,7 +31,7 @@ now create the jupyter lab session from a LOCAL machine (i.e. your own laptop co
 
 Things to note: #use a different machine if not working (e.g. foe-linux-02, lytham etc instead of foe-linux-03) # the sequence of 5 digit numbers can be anything in the range of (approx) 1100 -> 65000 (in this case 13029/13030) but pick something that no one else is likely to be using (i.e. not 12345)    
 
-`ssh -L 13029:localhost:13029 -L 13030:localhost:13030 foe-linux-03.leeds.ac.uk 'conda activate my_env; cd /nfs/; jupyter lab --no-browser --port=13029’  `   
+`ssh -L 13029:localhost:13029 -L 13030:localhost:13030 foe-linux-03.leeds.ac.uk 'conda activate my_env; cd /nfs/; jupyter lab --no-browser --port=13029'  `   
 
 n.b may need username too:   
 
