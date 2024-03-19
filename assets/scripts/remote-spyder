@@ -1,0 +1,81 @@
+#!/bin/bash
+
+# ---
+
+# usage function:
+function usage() {
+  echo "usage: $(basename ${0}) host"
+  exit
+}
+
+# check arguments:
+if [ "${#}" -lt 1 ] ; then
+  usage
+fi
+
+# ---
+
+# remote machine where spyder will be run is first argument:
+REMOTE_HOST="${1}"
+
+# directory on local machine where spyder kernel file will be stored:
+SPYDER_KERNELS="${HOME}/.spyder_kernels"
+
+# kernel file for remte session. will be created / updated:
+KERNEL_JSON="${SPYDER_KERNELS}/${REMOTE_HOST}.json"
+
+# ---
+
+# create spyder kernels directory, if it does not exist:
+mkdir -p ${SPYDER_KERNELS}
+
+# generate a session key:
+SESSION_KEY=$(python -c 'import uuid ; print(uuid.uuid1().hex)')
+
+# pick some random ports to use. it is possible some of these may be in use on
+# the remote machine ... :
+SHELL_PORT=$((50000 + $((RANDOM % 10000))))
+IOPUB_PORT=$((50000 + $((RANDOM % 10000))))
+STDIN_PORT=$((50000 + $((RANDOM % 10000))))
+CONTROL_PORT=$((50000 + $((RANDOM % 10000))))
+HB_PORT=$((50000 + $((RANDOM % 10000))))
+
+# create kernel file on local machine:
+cat > ${KERNEL_JSON} <<EOF
+{
+  "shell_port": ${SHELL_PORT},
+  "iopub_port": ${IOPUB_PORT},
+  "stdin_port": ${STDIN_PORT},
+  "control_port": ${CONTROL_PORT},
+  "hb_port": ${HB_PORT},
+  "ip": "127.0.0.1",
+  "key": "${SESSION_KEY}",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": ""
+}
+EOF
+echo "* kernel file created at: ${KERNEL_JSON}"
+
+# connect to remote host and launch spyder kernel:
+ssh \
+  -q \
+  -t \
+  -J eebjs@remote-access.leeds.ac.uk \
+  ${REMOTE_HOST} \
+  -L ${SHELL_PORT}:localhost:${SHELL_PORT} \
+  -L ${IOPUB_PORT}:localhost:${IOPUB_PORT} \
+  -L ${STDIN_PORT}:localhost:${STDIN_PORT} \
+  -L ${CONTROL_PORT}:localhost:${CONTROL_PORT} \
+  -L ${HB_PORT}:localhost:${HB_PORT} \
+  "echo '* connected to ${REMOTE_HOST}' ;
+   conda activate newenv ;
+   python \
+     -m spyder_kernels.console \
+     --shell=${SHELL_PORT} \
+     --iopub=${IOPUB_PORT} \
+     --stdin=${STDIN_PORT} \
+     --control=${CONTROL_PORT} \
+     --hb=${HB_PORT} \
+     --Session.key=${SESSION_KEY} \
+     --Session.keyfile="
