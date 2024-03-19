@@ -14,7 +14,7 @@ Currently most of us who use Spyder launch it from a linux machine we have ssh'e
 
 
 
-Richard Rigby worked out how to set this up and wrote this bash script:  remote-spyder 
+Richard Rigby worked out how to set this up and wrote this bash script:  [remote-spyder](https://github.com/bjsilver/bag_wiki/blob/main/assets/scripts/remote-spyder)
 
 Use it by running (where ${ USER}  is your username and [remote] is a machine e.g. viper/carnegie): 
 
