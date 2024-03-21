@@ -17,6 +17,8 @@ Here 'the easy way' refers to using a [script](https://github.com/bjsilver/bag_w
 ### Usage
 Place the script in your home directory of your remote machine. Connect to a remote machine and start a jupyter notebook session using:
 ```bash
-. remote-jupyter viper
+. remote-jupyter viper # or your machine of choice
 ```
-or login to your machine of choice
+
+This will provide you with a link that you can copy and paste into your browser
+
