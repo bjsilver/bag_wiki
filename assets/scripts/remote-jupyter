@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# command to set up python environment on remote system:
+PYTHON_LOAD='conda activate myenv'
+
+# ---
+
+# usage function:
+function usage() {
+  echo "$(basename ${0}) host [pwd]"
+  exit
+}
+
+# check arguments:
+if [ "${#}" -lt 1 ] ; then
+  usage
+fi
+
+# arguments:
+REMOTE_HOST="${1}"
+WORK_DIR="${2}"
+
+# pick a random port:
+PORT=$((20000 + $((RANDOM % 40000))))
+
+# SSH to remote host and start the notebook:
+ssh \
+  -q \
+  -T \
+  ${REMOTE_HOST} \
+  -L ${PORT}:localhost:${PORT} \
+  -t "${PYTHON_LOAD} ; \
+      cd '${WORK_DIR}' ; \
+      jupyter notebook --port=${PORT} --no-browser"
