@@ -15,7 +15,7 @@ Here 'the easy way' refers to using a [script](https://github.com/bjsilver/bag_w
 * The 'jupyter notebook' can be replaced with 'jupyter lab' if preferred.
 
 ### Usage
-Place the script in your home directory of your remote machine. Connect to a remote machine and start a jupyter notebook session using:
+Place the script in your home directory of your local machine. Connect to a remote machine and start a jupyter notebook session using:
 ```bash
 . remote-jupyter viper # or your machine of choice
 ```
