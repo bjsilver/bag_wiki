@@ -19,4 +19,5 @@ _author: Callum_
 
 **How** can I get and run VSCode?
 - Download/ load from AppsAnywhere on windows or from website for mac (should be an allowed download, if not IT would install it for you)
-- 
+
+to be continued...
