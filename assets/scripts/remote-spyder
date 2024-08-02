@@ -61,7 +61,7 @@ echo "* kernel file created at: ${KERNEL_JSON}"
 ssh \
   -q \
   -t \
-  -J eebjs@remote-access.leeds.ac.uk \
+  -J foe-linux-04 \
   ${REMOTE_HOST} \
   -L ${SHELL_PORT}:localhost:${SHELL_PORT} \
   -L ${IOPUB_PORT}:localhost:${IOPUB_PORT} \
