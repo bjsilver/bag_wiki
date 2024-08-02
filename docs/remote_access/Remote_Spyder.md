@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 
-##Remote console in Spyder to reduce lag 
+## Remote console in Spyder to reduce lag 
 
 _Contributors: Richard Rigby, Ben Silver_
 
@@ -21,7 +21,7 @@ Currently most of us who use Spyder launch it from a linux machine we have ssh'e
 Richard Rigby worked out how to set this up and wrote this bash script:  [remote-spyder](https://github.com/bjsilver/bag_wiki/blob/main/assets/scripts/remote-spyder)
 
 {: .warning }
-> The `remote-spyder` script may not work unless your ssh config file is configured to jump to remote hosts via `rash.leeds.ac.uk` and `foe-linu`, as shown in [this example](/assets/scripts/ssh_config_example)
+> The `remote-spyder` script may not work unless your ssh config file is configured to jump to remote hosts via `rash.leeds.ac.uk` and `foe-linux`, as shown in [this example](https://github.com/bjsilver/bag_wiki/blob/main/assets/scripts/ssh_config_example)
 
 ## Usage
 
