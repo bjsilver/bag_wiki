@@ -1,0 +1,20 @@
+ServerAliveCountMax 100
+ServerAliveInterval 300
+TCPKeepAlive no
+
+Host rash
+  Hostname %h.leeds.ac.uk
+  User eebjs
+  ControlMaster auto
+  ControlPath ~/.ssh/sockets/%r@%h-%p
+  ControlPersist 43200s
+
+Host foe-linux-0?
+  Hostname %h.leeds.ac.uk
+  User eebjs
+  ProxyJump rash
+
+Host viper jester sundown
+  Hostname %h.leeds.ac.uk
+  User eebjs
+  ProxyJump foe-linux-04

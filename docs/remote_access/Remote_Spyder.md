@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 
-Remote console in Spyder to reduce lag 
+##Remote console in Spyder to reduce lag 
 
 _Contributors: Richard Rigby, Ben Silver_
 
@@ -18,15 +18,16 @@ _Contributors: Richard Rigby, Ben Silver_
 
 Currently most of us who use Spyder launch it from a linux machine we have ssh'ed into which can create lag (especially if you are off campus). But in Spyder there is a feature where you can run Spyder locally, but the terminal can be a remote one. This means the terminal will have access to all the packages/files on the remote machine, but the application is being run locally (i.e. you have to install it on your own computer) so there will be no lag. I've found this connection to be much more stable than running Spyder in an Xwindow using ssh.
 
-
-
 Richard Rigby worked out how to set this up and wrote this bash script:  [remote-spyder](https://github.com/bjsilver/bag_wiki/blob/main/assets/scripts/remote-spyder)
 
-Use it by running (where ${ USER}  is your username and [remote] is a machine e.g. viper/carnegie): 
+{: .warning }
+> The `remote-spyder` script may not work unless your ssh config file is configured to jump to remote hosts via `rash.leeds.ac.uk` and `foe-linu`, as shown in [this example](/assets/scripts/ssh_config_example)
 
-`./remote-spyder ${​​​​​​​​​​​​​​​​​​​​​​​USER}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​@[remote].leeds.ac.uk`
+## Usage
 
-If you have setup ssh keys you should only have to enter your password once. Then from within your local Spyder: 
+Use it by running (where ${ USER}  is your username and [remote] is a machine e.g. viper/carnegie), and [env_name] is the name of your desired conda environment: 
+
+`./remote-spyder ${​​​​​​​​​​​​​​​​​​​​​​​USER}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​@[remote].leeds.ac.uk [env_name]`
 
 - Click the 'hamburger' menu in the top right corner of the console pane and choose the option 'Connect to an existing kernel'. 
 
