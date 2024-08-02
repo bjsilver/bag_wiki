@@ -6,9 +6,8 @@ nav_order: 2
 
 # How to contribute
 
-# Work in Progress!
-
-- Make a GitHub Account
+## Option 1: Using Github
+To contribute using Github you must first have an account. 
 
 - Go to the [repository](https://github.com/bjsilver/bag_wiki)
 - Press 'Fork', then create new fork. This enables you to make changes to a personal version of the repository.

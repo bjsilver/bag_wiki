@@ -25,8 +25,44 @@ def timer(func):
     return wrapper
 
 
+#%% print number of cores
+from multiprocessing import cpu_count
+print(cpu_count())
+
+
+#%% load in data
+
+# 7.8 Gb grib file
 ds = xr.open_dataset('/nfs/a68/eebjs/hardknott/drought/vpd_variables.grib',
                      engine='cfgrib')
+# would work with netcdf also
+
+# print to see dimensions
+print(ds)
+
+# plot a slice
+ds['sp'][0].plot.imshow()
+
+
+#%% define function to calculate vpd
+
+def calculate_vpd(ds):
+    
+    t2m_c = ds['t2m'] - 273.15
+    d2m_c = ds['d2m'] - 273.15
+    sp_mb = ds['sp'] / 100
+    
+    # first calculate saturated vapour pressure
+    fw = 1 + 7e-4 + 3.46e-6 * sp_mb
+    svp = 6.112 * fw * np.exp( (17.67 * t2m_c) / (t2m_c + 243.5) )
+    
+    # then calculate actual vapour pressure
+    avp = 6.112 * fw * np.exp( (17.67 * d2m_c) / (d2m_c + 243.5) )
+    
+    # then vapour pressure deficit is:
+    vpd = svp - avp
+    
+    return vpd
 
 
 #%% calculate vpd with chunking and dask
@@ -36,47 +72,31 @@ def calculate_vpd_with_chunking(ds):
 
     ds = ds.chunk({'time':1})
     
-    # first calculate saturated vapour pressure
-    fw = 1 + 7e-4 + 3.46e-6 * ds['sp']
-    svp = 6.112 * fw * np.exp( (17.67 * ds['t2m']) / (ds['t2m'] + 243.5) )
-    
-    # then calculate actual vapour pressure
-    avp = 6.112 * fw * np.exp( (17.67 * ds['d2m']) / (ds['d2m'] + 243.5) )
-    
-    # then vapour pressure deficit is:
-    vpd = svp - avp
+    vpd = calculate_vpd(ds)
     
     with ProgressBar():
-        vpd = vpd.compute(num_workers=30, scheduler='threads')
+        vpd = vpd.compute(num_workers=30, scheduler='processes')
         
     return vpd
         
 vpd = calculate_vpd_with_chunking(ds)
 # took 20 seconds in test
 
-
+vpd[0].plot.imshow()
 
 #%% calculate vpd without dask
 
 @timer
 def calculate_vpd_without_chunking(ds):
 
-    # first calculate saturated vapour pressure
-    fw = 1 + 7e-4 + 3.46e-6 * ds['sp']
-    svp = 6.112 * fw * np.exp( (17.67 * ds['t2m']) / (ds['t2m'] + 243.5) )
-    
-    # then calculate actual vapour pressure
-    avp = 6.112 * fw * np.exp( (17.67 * ds['d2m']) / (ds['d2m'] + 243.5) )
-    
-    # then vapour pressure deficit is:
-    vpd = svp - avp
-    
+    vpd = calculate_vpd(ds)
+
     return vpd
         
 vpd = calculate_vpd_without_chunking(ds)
 # took 384 seconds in test
 
-# so 19.2x speedup
+# so 19x speedup
 
 
 #%% say we want to calculate the mean across time and plot
