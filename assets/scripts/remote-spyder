@@ -4,12 +4,12 @@
 
 # usage function:
 function usage() {
-  echo "usage: $(basename ${0}) host"
+  echo "usage: $(basename ${0}) host env_name"
   exit
 }
 
 # check arguments:
-if [ "${#}" -lt 1 ] ; then
+if [ "${#}" -lt 2 ] ; then
   usage
 fi
 
@@ -18,10 +18,13 @@ fi
 # remote machine where spyder will be run is first argument:
 REMOTE_HOST="${1}"
 
+# the python environment to activate is the second argument:
+ENV_NAME="${2}"
+
 # directory on local machine where spyder kernel file will be stored:
 SPYDER_KERNELS="${HOME}/.spyder_kernels"
 
-# kernel file for remte session. will be created / updated:
+# kernel file for remote session. will be created / updated:
 KERNEL_JSON="${SPYDER_KERNELS}/${REMOTE_HOST}.json"
 
 # ---
@@ -69,7 +72,7 @@ ssh \
   -L ${CONTROL_PORT}:localhost:${CONTROL_PORT} \
   -L ${HB_PORT}:localhost:${HB_PORT} \
   "echo '* connected to ${REMOTE_HOST}' ;
-   conda activate newenv ;
+   conda activate ${ENV_NAME} ;
    python \
      -m spyder_kernels.console \
      --shell=${SHELL_PORT} \
@@ -79,3 +82,4 @@ ssh \
      --hb=${HB_PORT} \
      --Session.key=${SESSION_KEY} \
      --Session.keyfile="
+
