@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Using VSCode
-parent: remote_access
+parent: Remote Access
 nav_order: 2
 ---
 _author: Callum_

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Remote Jupyter
-parent: remote_access
+parent: Remote Access
 nav_order: 2
 ---
 

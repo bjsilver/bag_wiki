@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SSH Keys
-parent: remote_access
+parent: Remote Access
 nav_order: 2
 ---
 
