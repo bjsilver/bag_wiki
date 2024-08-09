@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 ## What is backed up?
-Files on your linux home directory (e.g. `/nfs/see-fs-02_users/eebjs/<USERNAME>/`) and on the storage drives (e.g. `a68`) are backed up daily.
+Files on your linux home directory (e.g. `/nfs/see-fs-02_users/<USERNAME>/`) and on the storage drives (e.g. `a68`) are backed up daily.
 
 ## NOTE!!
 Backups should be able to get you out of a sticky situation where you've deleted something by mistake, but when the drives become full your files are not always backed up.
