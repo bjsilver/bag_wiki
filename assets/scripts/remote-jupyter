@@ -16,7 +16,6 @@ fi
 # arguments:
 REMOTE_HOST="${1}"
 PYTHON_LOAD="conda activate ${2}"
-WORK_DIR="${3}"
 
 # pick a random port:
 PORT=$((20000 + $((RANDOM % 40000))))
