@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# command to set up python environment on remote system:
-PYTHON_LOAD='conda activate myenv'
-
 # ---
 
 # usage function:
 function usage() {
-  echo "$(basename ${0}) host [pwd]"
+  echo "$(basename ${0}) host python-envname [directory]"
   exit
 }
 
@@ -18,7 +15,8 @@ fi
 
 # arguments:
 REMOTE_HOST="${1}"
-WORK_DIR="${2}"
+PYTHON_LOAD="conda activate ${2}"
+WORK_DIR="${3}"
 
 # pick a random port:
 PORT=$((20000 + $((RANDOM % 40000))))
@@ -26,7 +24,8 @@ PORT=$((20000 + $((RANDOM % 40000))))
 # SSH to remote host and start the notebook:
 ssh \
   -q \
-  -T \
+  -t \
+  -J foe-linux-04 \
   ${REMOTE_HOST} \
   -L ${PORT}:localhost:${PORT} \
   -t "${PYTHON_LOAD} ; \
