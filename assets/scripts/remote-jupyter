@@ -4,7 +4,7 @@
 
 # usage function:
 function usage() {
-  echo "$(basename ${0}) host python-envname [directory]"
+  echo "$(basename ${0}) host python-envname"
   exit
 }
 
@@ -29,5 +29,4 @@ ssh \
   ${REMOTE_HOST} \
   -L ${PORT}:localhost:${PORT} \
   -t "${PYTHON_LOAD} ; \
-      cd '${WORK_DIR}' ; \
       jupyter notebook --port=${PORT} --no-browser"
