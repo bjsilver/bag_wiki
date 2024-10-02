@@ -47,4 +47,5 @@ I will focus on Python here, but the process is similar for R (might add this at
 - Now, when refreshed, you can view all of your remote servers and connect to them by pressing the arrow button next to them ('Connect in current window')
 - Depending on your configuration you may need to type your password and or confirm via Duo (this can be streamlined with SSH keys, or when using a wired ethernet connection in university).
 - You can now code remotely, access and view files and plots seamlessly, congrats!
+- To end the session (important), use the command palette and see or search for Remote - SSH: close remote connection
 
