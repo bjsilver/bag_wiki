@@ -12,7 +12,8 @@ This is intended as a starting point, from which there are many better resources
 
 Below shows an example workspace, highlighting some of the main features of VSCode which make it great. 
 
-<img src="/assets/screenshots/vscode_example_annotated.png" alt="drawing" width="700"/>
+![vscode IDE](/assets/screenshots/vscode_example_annotated.png)
+
 
 ### **What** is VSCode and **why** would you use it?
 - Its a powerful and open source integrated development environment with a graphical user interface (IDE GUI if you will...)
@@ -24,7 +25,7 @@ Below shows an example workspace, highlighting some of the main features of VSCo
 - Seamless source control integration with Git and GitHub
 - It is commonly used in industry in favour of language specific IDEs such as Spyder or RStudio
 - If you have used Jupyter Notebooks, Spyder or RStudio before, it will be VERY easy to pick up
-- VSCode is very well documented and there are lots of good tutorials
+- VSCode is very well documented and there are lots of good tutorials (eg. https://code.visualstudio.com/docs/getstarted/getting-started)
   
 ### Now you're convinced, **how** can I get and run VSCode locally?
 0. requirements: for python you'll need conda or similar installed (but you probs have this already), also it isn't necessary (you can use powershell or command prompt), but it is helpful to download WSL (windows subsystem for linux) as this will give you easier access to command line features on windows (as a replacement for MobaXterm or similar).
