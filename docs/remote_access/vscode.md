@@ -10,11 +10,9 @@ _author: Callum_
 In this tutorial you will learn what VSCode is, why you might want to use it and how you can go about using it.
 This is intended as a starting point, from which there are many better resources for advancing your use. 
 
-Below shows an example workspace, highlighting some of the main features of VSCode which make it great. 
-assets/screenshots/vscode_example_annotated.png
+Below shows an example workspace, highlighting some of the main features of VSCode which make it great.
 
-<img src="/assets/screenshots/vscode_example_annotated.png">
-
+![screenshot](/assets/screenshots/vscode_example_annotated.png)
 
 ### **What** is VSCode and **why** would you use it?
 - Its a powerful and open source integrated development environment with a graphical user interface (IDE GUI if you will...)
