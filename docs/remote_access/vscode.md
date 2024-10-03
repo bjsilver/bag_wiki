@@ -7,10 +7,10 @@ nav_order: 2
 _author: Callum_
 
 ## Using VSCode 
-In this tutorial you will learn what VSCode is, why you might want to use it and how you can go about using it.
+In this tutorial you will learn **what** VSCode is, **why** you might want to use it and **how** you can go about using it both **locally** and **remotely**.
 This is intended as a starting point, from which there are many better resources for advancing your use. 
 
-Below shows an example workspace, highlighting some of the main features of VSCode which make it great.
+For context, the image below shows an example workspace, highlighting some of the main features of VSCode which make it great.
 
 ![vscode IDE](../../assets/screenshots/vscode_example_annotated.png)
 
@@ -38,7 +38,7 @@ I will focus on Python here, but the process is similar for R (might add this at
 7. You'll want to install **Python** and **Jupyter** but to access remote machines such as foe-xx, viper, ARC etc you'll need '**Remote - SSH**' as well
 8. From this point, assuming you have anaconda (or similar) installed, you will be able to create a new python file, save it in any local directory and run the file in the terminal choosing your exisiting or new conda environment, or interactively (like you can in Spyder etc). If you get stuck here the walkthroughs on the Welcome page are actually quite helpful
 
-### Remote servers
+### Developing on Remote Servers
 - Using the installed 'Remote - SSH' extension, accessible on the left of the window (called Remote Explorer), you can add your remote server pathways, and simply navigate to them with the click of a button.
 - In exactly the same way you would navigate to foe machines via the command line using your configured ssh/config file (see how to configure this file here: https://bjsilver.github.io/bag_wiki/docs/remote_access/SSH_configs.html), you can write a config file specifically in VSCode.
 - To access this file, you can use the command palatte (basically a search function in VSCode which does almost everything), Ctrl + Shift + P on window to access, and search for 'Remote - SSH', you will see open configuration file.
