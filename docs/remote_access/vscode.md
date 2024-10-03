@@ -12,7 +12,7 @@ This is intended as a starting point, from which there are many better resources
 
 Below shows an example workspace, highlighting some of the main features of VSCode which make it great.
 
-![screenshot](/assets/screenshots/vscode_example_annotated.png)
+![vscode IDE](../../assets/screenshots/vscode_example_annotated.png)
 
 ### **What** is VSCode and **why** would you use it?
 - Its a powerful and open source integrated development environment with a graphical user interface (IDE GUI if you will...)
