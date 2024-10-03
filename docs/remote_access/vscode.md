@@ -11,8 +11,9 @@ In this tutorial you will learn what VSCode is, why you might want to use it and
 This is intended as a starting point, from which there are many better resources for advancing your use. 
 
 Below shows an example workspace, highlighting some of the main features of VSCode which make it great. 
+assets/screenshots/vscode_example_annotated.png
 
-![vscode IDE](/assets/screenshots/vscode_example_annotated.png)
+<img src="/assets/screenshots/vscode_example_annotated.png">
 
 
 ### **What** is VSCode and **why** would you use it?
