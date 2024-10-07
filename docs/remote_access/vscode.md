@@ -48,3 +48,8 @@ I will focus on Python here, but the process is similar for R (might add this at
 - You can now code remotely, access and view files and plots seamlessly, congrats!
 - To end the session (important), use the command palette and see or search for Remote - SSH: close remote connection
 
+### Tips
+- Sometimes it takes a while to find and connect to a remote machine and vscode will decide to timeout. To avoid this, you in 'Remote - SSH: Settings', increase the 'Connect Timeout' value. I set mine to 1080 which is plenty.
+- Setting up SSH keys is strongly advised as this will reduce the number of times you will need to enter your password. A tutorial on setting up keys is here  [SSH Keys](https://bjsilver.github.io/bag_wiki/docs/remote_access/SSH_key_pairs.html).
+- When on campus, connect your laptop to the ethernet, this will give a further smoother connection, and will allow you to access remote machines without entering passwords.
+
