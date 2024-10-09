@@ -17,7 +17,7 @@ For context, the image below shows an example workspace, highlighting some of th
 ### **What** is VSCode and **why** would you use it?
 - Its a powerful and open source integrated development environment with a graphical user interface (IDE GUI if you will...)
 - You can write, edit and run code interactively in several common languages (Python, R, Julia, C...)
-- You can easily access and run code on remote machines (with zero lag)
+- You can easily access and run code on remote machines (with zero lag), without the need for NoMachine or x2go
 - You can graphically view local and remote file systems, outputs (plots etc) and files (csv, netcdf, tiff...)
 - You can run code interactively using python scripts or Jupyter Notebooks
 - Access to thousands of open source 'Extensions' which make coding life better!
