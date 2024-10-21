@@ -52,4 +52,5 @@ I will focus on Python here, but the process is similar for R (might add this at
 - Sometimes it takes a while to find and connect to a remote machine and vscode will decide to timeout. To avoid this, you in 'Remote - SSH: Settings', increase the 'Connect Timeout' value. I set mine to 1080 which is plenty.
 - Setting up SSH keys is strongly advised as this will reduce the number of times you will need to enter your password. A tutorial on setting up keys is here  [SSH Keys](https://bjsilver.github.io/bag_wiki/docs/remote_access/SSH_key_pairs.html).
 - When on campus, connect your laptop to the ethernet, this will give a further smoother connection, and will allow you to access remote machines without entering passwords.
+- I use the extension 'Resource Monitor' which allows you to see memory usage of your connected machine in your taskbar. This is useful for both seeing if there is available memory for your task to avoid crashing the machine, and for seeing if your task is taking unexpectedly large amounts of memory.
 
