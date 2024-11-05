@@ -60,3 +60,5 @@ mount_onedrive() {
 # Call the function to mount OneDrive
 mount_onedrive
 ```
+Once you login and logout, this should work! and you should find OneDrive
+in your home directory
