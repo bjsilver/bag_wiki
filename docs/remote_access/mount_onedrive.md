@@ -38,7 +38,7 @@ for how to set it up on ARC.
 
 ### 2. Mount automatically
 {: .important-title }
-> Update!
+> Guide updated!
 > Richard Rigby recommends we don't mount OneDrive in our home directory since it's a networked drive. We can mount it on `/dev/shm` instead
 
 To mount it automatically each time you login on a Linux machine, add the
@@ -65,7 +65,7 @@ mount_onedrive() {
 mount_onedrive
 ```
 
-{: .warning}
+{: .warning }
 > You will have to create the `/dev/shm/OneDrive-$USER` on each of the remote machines you plan to use (e.g. `foe-linux-01`, `foe-linux-02`, `viper` etc.)
 
 Finally, create a soft link to `/dev/shm/OneDrive-$USER` in your home directory so you can easily access OneDrive from there, e.g.
