@@ -41,7 +41,7 @@ for how to set it up on ARC.
 > Guide updated!
 > Richard Rigby recommends we don't mount OneDrive in our home directory since it's a networked drive. We can mount it on `/dev/shm` instead
 
-To mount it automatically each time you login on a Linux machine, add the
+To mount it automatically each time you login on a Linux machine, create a directory here:`/dev/shm/OneDrive-$USER`, and add the
 following code to your `~/.bashrc` file:
 
 ```bash
