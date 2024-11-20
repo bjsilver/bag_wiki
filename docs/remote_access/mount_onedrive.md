@@ -37,13 +37,17 @@ IT have written](https://it.leeds.ac.uk/it?id=kb_article_view&table=kb_knowledge
 for how to set it up on ARC.
 
 ### 2. Mount automatically
+{: .important-title }
+> Update!
+> Richard Rigby recommends we don't mount OneDrive in our home directory since it's a networked drive. We can mount it on `/dev/shm` instead
+
 To mount it automatically each time you login on a Linux machine, add the
 following code to your `~/.bashrc` file:
 
 ```bash
 # Automatically mount OneDrive with rclone
-MOUNT_POINT="$HOME/onedrive"
-RCLONE_REMOTE="onedrive"
+MOUNT_POINT="/dev/shm/OneDrive-$USER"
+RCLONE_REMOTE="onedrive" # the name that you gave onedrive when setting up with rclone
 RCLONE_COMMAND="rclone mount $RCLONE_REMOTE: $MOUNT_POINT --vfs-cache-mode writes --daemon"
 
 # Function to check and mount OneDrive
@@ -60,5 +64,15 @@ mount_onedrive() {
 # Call the function to mount OneDrive
 mount_onedrive
 ```
-Once you login and logout, this should work! and you should find OneDrive
+
+{: .warning}
+> You will have to create the `/dev/shm/OneDrive-$USER` on each of the remote machines you plan to use (e.g. `foe-linux-01`, `foe-linux-02`, `viper` etc.)
+
+Finally, create a soft link to `/dev/shm/OneDrive-$USER` in your home directory so you can easily access OneDrive from there, e.g.
+```bash
+ln -s /dev/shm/OneDrive-$USER ~/onedrive
+```
+This step only needs to be done once (you don't have to do it for each remote machine)
+
+Once you login and logout, this should work! and you should find `onedrive`
 in your home directory
