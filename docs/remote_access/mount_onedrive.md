@@ -37,15 +37,11 @@ IT have written](https://it.leeds.ac.uk/it?id=kb_article_view&table=kb_knowledge
 for how to set it up on ARC.
 
 ### 2. Mount automatically
-{: .important-title }
-> Guide updated!
-> Richard Rigby recommends we don't mount OneDrive in our home directory since it's a networked drive. We can mount it on `/dev/shm` instead
 
 {: .important-title }
-> Update!
-> The old version of the `remote-spyder` script will no longer work as it used `remote-access.leeds.ac.uk`
+> Guide updated!
 >
-> Please download the new script and follow the guide below to modify your `~.ssh/config` to get it working again
+> Richard Rigby recommends we don't mount OneDrive in our home directory since it's a networked drive. We can mount it on `/dev/shm` instead
 
 To mount it automatically each time you login on a Linux machine, create a directory here:`/dev/shm/OneDrive-$USER`, and add the
 following code to your `~/.bashrc` file:
