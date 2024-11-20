@@ -36,6 +36,11 @@ on Linux using the `rclone` command but does not mount it. For this step, [use t
 IT have written](https://it.leeds.ac.uk/it?id=kb_article_view&table=kb_knowledge&sys_kb_id=5cdadc241bb1c950ba670ed0f54bcb04) 
 for how to set it up on ARC.
 
+{: .important-title }
+> Authentication issues
+>
+> If the authentication step (where a browser window pops up for you to login) fails because you are doing it on a remote machine, try following the guidance in the _If launching the remote browser does not work_ section of IT's guide, or using X2Go.
+
 ### 2. Mount automatically
 
 {: .important-title }
