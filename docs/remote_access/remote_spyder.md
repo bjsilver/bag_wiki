@@ -29,16 +29,17 @@ Use it by running (where ${ USER}  is your username and [remote] is a mach
 
 `./remote-spyder ${​​​​​​​​​​​​​​​​​​​​​​​USER}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​@[remote].leeds.ac.uk [env_name]`
 
-- Click the 'hamburger' menu in the top right corner of the console pane and choose the option 'Connect to an existing kernel'. 
+1. Open a local instance of Spyder (i.e. you will have to install it again on your local machine)
 
-- In the window that pops up, untick 'This is a remote kernel', and use the 'browse' button to open the .json file which will be named according to the machine you logged onto (e.g. eebjs@carnegie.leeds.ac.uk.json).  
+2. Click the 'hamburger' menu in the top right corner of the console pane and choose the option 'Connect to an existing kernel'. 
 
-- Click ok and then console should open. You can check whether the connection has been made by doing pwd in the console. It should show your linux home directory. 
+3. In the window that pops up, untick 'This is a remote kernel', and use the 'browse' button to open the .json file which will be named according to the machine you logged onto (e.g. eebjs@carnegie.leeds.ac.uk.json).  
+
+4. Click ok and then console should open. You can check whether the connection has been made by doing pwd in the console. It should show your linux home directory. 
 
 
-A few things to note: 
+#### A few things to note: 
 
-- The stop button in spyder will not be able to interrupt the kernel.
-- To do the you need to go to the bash terminal from which you launched the remote-spyder script, and do ctrl+c there.
+- The stop button in spyder will not be able to interrupt the kernel. To do this, you need to go to the bash terminal from which you launched the remote-spyder script, and do ctrl+c there.
 - When you want to shut down the connection, ctrl+c will not work (as this is used to interrupt the kernel) you instead need to do ctrl + \ (backslash)
-- You need to find a way to access your scripts that are on the remote machine on your local machine before you can open them in spyder, and a way to keep the scripts sychronised between the local and remote machines. 
+- You need to find a way to access your scripts that are on the remote machine on your local machine before you can open them in spyder, and a way to keep the scripts sychronised between the local and remote machines (e.g. [with OneDrive](https://bjsilver.github.io/bag_wiki/docs/remote_access/mount_onedrive.html). 
