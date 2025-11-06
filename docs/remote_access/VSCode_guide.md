@@ -1,3 +1,10 @@
+---
+layout: default
+title: Guide to VSCode
+parent: Remote Access
+nav_order: 2
+---
+
 # Guide to VS Code
 by Ben Bradley, 29/03/2025
 (last updated 04/11/2025)
